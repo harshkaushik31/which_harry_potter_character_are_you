@@ -8,7 +8,7 @@
         "category": "values",
         "question": "When faced with a difficult situation, what matters most to you?",
         "options": [
-          "Doing what’s right, even if it’s risky",
+          "Doing what's right, even if it's risky",
           "Finding the most logical and well-planned solution",
           "Standing by the people I care about",
           "Protecting my own interests first",
@@ -44,7 +44,7 @@
         "category": "empathy",
         "question": "If someone you dislike needs help, what do you do?",
         "options": [
-          "Help them anyway — it’s the right thing",
+          "Help them anyway — it's the right thing",
           "Help, but only if it makes sense logically",
           "Help, but feel conflicted",
           "Ignore them",
@@ -90,9 +90,9 @@
       {
         "id": 8,
         "category": "stress",
-        "question": "When you’re under pressure, you:",
+        "question": "When you're under pressure, you:",
         "options": [
-          "Act quickly, even if it’s risky",
+          "Act quickly, even if it's risky",
           "Stay calm and think it through",
           "Look for reassurance from others",
           "Become defensive or aggressive",
@@ -154,7 +154,7 @@
         "options": [
           "Invisibility Cloak",
           "Time-Turner",
-          "Marauder’s Map",
+          "Marauder's Map",
           "Elder Wand",
           "A mysterious old book"
         ]
@@ -166,9 +166,9 @@
         "options": [
           "Yes, without hesitation",
           "Yes, but only after careful thought",
-          "I’d struggle but probably would",
+          "I'd struggle but probably would",
           "Only if it benefited me too",
-          "I’m not sure"
+          "I'm not sure"
         ]
       }
     ]
