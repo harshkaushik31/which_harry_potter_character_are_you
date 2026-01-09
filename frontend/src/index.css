@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+.hp-title {
+  font-family: 'Henny Penny', cursive;
+}
+
+.body-text {
+  font-family: 'Outfit', sans-serif;
+}

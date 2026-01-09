@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { questions } from "./constants/questions"
 import axios from 'axios';
+import { ClipLoader } from 'react-spinners'
 
 function App() {
 
@@ -34,15 +35,16 @@ function App() {
     setLoading(true);
 
     try {
+      const base_url = import.meta.env.VITE_API_URL;
       const res = await axios.post(
-      "http://localhost:8000/api/v1/get-charachter",
-      { questions: finalAnswers }
-    );
+        `${base_url}/api/v1/get-charachter`,
+        { questions: finalAnswers }
+      );
 
 
-    console.log(res.data);
+      console.log(res.data);
 
-    setResult(res.data.charachter);
+      setResult(res.data.charachter);
 
     } catch (error) {
       console.log(error);
@@ -53,12 +55,23 @@ function App() {
   }
 
   if (loading) {
-    return <div className="bg-[#0e1a40] min-h-screen flex flex-col items-center justify-center text-white text-center">Analyzing your personality...</div>;
+    return (
+      <div className="bg-[#0e1a40] min-h-screen flex flex-col items-center justify-center text-[#936b2d]" >
+        <h1>Analysing your personality...</h1>
+        <ClipLoader
+        color="#936b2d"
+        loading={loading}
+        size={50}
+        aria-label="Loading Spinner"
+        data-testid="loader"
+      />
+      </div>
+    );
   }
 
   if (result) {
     return (
-      <div className="bg-[#0e1a40] min-h-screen flex flex-col items-center justify-center text-white">
+      <div className="bg-[#0e1a40] min-h-screen flex flex-col items-center justify-center hp-title text-[#936b2d]">
         <h1 className="text-4xl mb-4">You are</h1>
         <h2 className="text-5xl font-bold">{result}</h2>
       </div>
@@ -67,8 +80,8 @@ function App() {
 
   return (
     <>
-      <div className="bg-[#0e1a40] min-h-screen text-white p-6">
-        <h1 className="text-4xl text-center mb-4">
+      <div className="bg-[#0e1a40] min-h-screen p-6 body-text text-[#936b2d]">
+        <h1 className="text-4xl text-center mb-4 hp-title text-[#936b2d]">
           {questions.quiz.title}
         </h1>
 
@@ -82,15 +95,15 @@ function App() {
           </h2>
 
           <div className="flex flex-col gap-4">
-          {currentQuestion.options.map((option, index) => (
-            <button
-              key={index}
-              onClick={() => handleAnswerSelect(option)}
-              className="bg-[#1b2a6b] hover:bg-[#273c9b] p-4 rounded-lg text-left"
-            >
-              {option}
-            </button>
-          ))}
+            {currentQuestion.options.map((option, index) => (
+              <button
+                key={index}
+                onClick={() => handleAnswerSelect(option)}
+                className="bg-[#1b2a6b] hover:bg-[#273c9b] p-4 rounded-lg text-left"
+              >
+                {option}
+              </button>
+            ))}
           </div>
 
         </div>
