@@ -3,6 +3,6 @@ import { getCharachter } from '../controllers/charachter.controller.js';
 
 const router = express.Router();
 
-router.post('/getCharachter', getCharachter)
+router.post('/get-charachter', getCharachter)
 
 export default router;

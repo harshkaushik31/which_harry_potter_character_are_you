@@ -32,12 +32,14 @@ ${formattedQA}
       contents: prompt,
     });
 
-    console.log(`Response from gemini: ${response}`);
-
+    
     const geminiResponse = response.text;
+    
+    console.log('Response from gemini: ',response.text);
 
     return res.status(200).json({
       message: geminiResponse,
+      charachter: geminiResponse
     });
   } catch (error) {
     res.status(500).json({
