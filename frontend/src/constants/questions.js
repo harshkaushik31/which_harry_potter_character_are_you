@@ -1,4 +1,4 @@
-{
+export const questions = {
   "quiz": {
     "title": "Which Harry Potter Character Are You?",
     "description": "Answer the questions honestly to discover which Harry Potter character matches your personality.",
